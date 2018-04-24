@@ -1,0 +1,16 @@
+#!/usr/bin/gnuplot
+
+# ./math_expression.plot
+
+set output "math_expression.jpg"
+set terminal jpeg
+
+set title "math expression"
+
+set xlabel "Year"
+set xrange [1 : 100]
+
+set ylabel "Total"
+
+plot 1.01**x with lines title "1.01^x",\
+     0.99**x with lines title "0.99^x"

@@ -1,0 +1,16 @@
+set output output_filename
+set terminal jpeg
+
+set title 'datafile'
+
+set xlabel "X"
+
+set ylabel "Y"
+
+plot input_filename using 1:2 with linespoint title 'i' lc rgb '#004200', input_filename using 1:2:2 with labels notitle,\
+     input_filename using 1:3 with linespoint title 'j' lc rgb 'red', input_filename using 1:($3+1.5):3 with labels notitle,\
+     input_filename using 1:4 with line title 'k'
+
+# http://www.gnuplot.info/docs_4.0/gpcard.pdf
+# https://stackoverflow.com/a/16214284/1498303
+# https://stackoverflow.com/questions/12328603/how-to-pass-command-line-argument-to-gnuplot
