@@ -10,9 +10,12 @@
   - [FYI](https://unix.stackexchange.com/a/421302/73846)
 
 ### all threads of a process * every-cpu
-  - maybe `ps -p <pid> -L -o pid,tid,psr,pcpu`  works in some cases.
+  - maybe `ps -p <pid> -L -o pid,tid,psr,pcpu` works
   - [FYI](https://stackoverflow.com/a/3910155)
 
 ### perf
   - `perf record -p <pid> -g -- sleep 57` and `perf report`
   - [FlameGragh](https://github.com/brendangregg/FlameGraph)
+    - perf script > out.perf
+    - ./stackcollapse-perf.pl out.perf > out.folded
+    - ./flamegraph.pl out.olded > out.svg
