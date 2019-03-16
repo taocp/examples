@@ -18,4 +18,4 @@
   - [FlameGragh](https://github.com/brendangregg/FlameGraph)
     - perf script > out.perf
     - ./stackcollapse-perf.pl out.perf > out.folded
-    - ./flamegraph.pl out.olded > out.svg
+    - ./flamegraph.pl out.folded > out.svg
